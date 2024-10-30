@@ -25,7 +25,7 @@ client.tls_set(ca_certs=ca_path, certfile=cert_path, keyfile=key_path, cert_reqs
 
 # Connect to the broker
 client.connect(broker, port)
-
+client.loop_start()
 # Function to publish temperature data
 def publish_data():
     while True:
